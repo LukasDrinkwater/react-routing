@@ -1,20 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import "./index.css";
 
-const App = () => {
+// path in Route is the bath in the address bar
+// Link and NavLink show up as anchor tags in the DOM. The user sees them
+// NavLink automatically gets a class of "active" when its clicked
+
+function App() {
   return (
-    <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/profile">Profile page</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <BrowserRouter>
+      <header>
+        <nav>
+          <h1>Jobarouter</h1>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="about">About</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
