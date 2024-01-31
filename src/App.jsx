@@ -15,6 +15,9 @@ import "./index.css";
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 
+// router stores all the routes for linking the Link/NavLink to the
+// correct path.
+
 // path in Route is the bath in the address bar
 // Link and NavLink show up as anchor tags in the DOM. The user sees them
 // NavLink automatically gets a class of "active" when its clicked

@@ -1,4 +1,7 @@
 import { Outlet, NavLink } from "react-router-dom";
+
+//
+
 // Header is at the top of every page. Then the other components are rendered
 // in <main>
 
